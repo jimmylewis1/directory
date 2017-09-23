@@ -1,0 +1,22 @@
+<div class="global__page-title">Onboarding</div>
+<div class="global__main-line-container">
+  <div class="global__main-line-title">Main Onboarding Line - </div>
+  <div class="global__main-line"> (888) 797 - 4942</div>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <th>Name</th>
+    <th>Title</th>
+    <th class="global__td-center">Direct Number</th>
+    <th class="global__td-center">Internal Extension</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let onboarder of onboarding">
+    <td>{{ onboarder.first_name}} {{ onboarder.last_name}}</td>
+    <td>{{ onboarder.title}}</td>
+    <td class="global__td-center">{{ onboarder.phone}}</td>
+    <td class="global__td-center">{{ onboarder.phone_ext}}</td>
+  </tr>
+  </tbody>
+</table>

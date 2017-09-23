@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container header__container">
+  <div class="header__logo-container">
+    <div class="header__logo inlineSvg__logo"
+         routerLink="home"
+         [inlineSVG]="'assets/images/wv-icon-logo.svg'"></div>
+    Employee Directory
+  </div>
+  <app-navigation></app-navigation>
+</div>
+<div class="container">
+  <div class="view__container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

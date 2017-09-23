@@ -1,0 +1,25 @@
+@import "../styles/colors";
+@import "../styles";
+
+
+
+.header {
+  &__container {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.view {
+  &__container {
+    margin-top: 2rem;
+  }
+}

@@ -1,0 +1,13 @@
+@import "../styles/colors";
+
+.inlineSvg {
+  cursor: pointer;
+
+  &__logo {
+    margin-right: 10px;
+
+    svg {
+      width: 200px;
+    }
+  }
+}

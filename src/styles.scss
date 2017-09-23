@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+@import "styles/colors";
+@import "styles/images";
+
+button {
+  cursor: pointer;
+}
+
+a {
+  &:active {
+    outline: none;
+  }
+}
+
+.global {
+  &__page-title {
+    color: $gray1;
+    font-size: 28px;
+  }
+  &__main-line-container {
+    display: flex;
+  }
+  &__td-center {
+    text-align: center;
+  }
+}

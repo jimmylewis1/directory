@@ -1,0 +1,22 @@
+<div class="global__page-title">Support</div>
+<div class="global__main-line-container">
+  <div class="global__main-line-title">Main Support Line - </div>
+  <div class="global__main-line"> (888) 579 - 5668 (opt. 1)</div>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <th>Name</th>
+    <th>Title</th>
+    <th class="global__td-center">Direct Number</th>
+    <th class="global__td-center">Internal Extension</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let supportRep of support">
+    <td>{{ supportRep.first_name}} {{ supportRep.last_name}}</td>
+    <td>{{ supportRep.title}}</td>
+    <td class="global__td-center">{{ supportRep.phone}}</td>
+    <td class="global__td-center">{{ supportRep.phone_ext}}</td>
+  </tr>
+  </tbody>
+</table>

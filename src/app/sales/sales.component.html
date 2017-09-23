@@ -1,0 +1,22 @@
+<div class="global__page-title">Sales</div>
+<div class="global__main-line-container">
+  <div class="global__main-line-title">Main Sales Line - </div>
+  <div class="global__main-line"> (888) 545 - 8880</div>
+</div>
+
+<table class="table table-striped table-hover">
+  <thead>
+    <th>Name</th>
+    <th>Title</th>
+    <th class="global__td-center">Direct Number</th>
+    <th class="global__td-center">Internal Extension</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let salesperson of sales">
+      <td>{{ salesperson.first_name}} {{ salesperson.last_name}}</td>
+      <td>{{ salesperson.title}}</td>
+      <td class="global__td-center">{{ salesperson.phone}}</td>
+      <td class="global__td-center">{{ salesperson.phone_ext}}</td>
+    </tr>
+  </tbody>
+</table>
