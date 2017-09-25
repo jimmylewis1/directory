@@ -37,7 +37,8 @@ const appRoutes: Routes = [
     { path: 'csm', component: CsmsComponent },
     { path: 'support', component: SupportComponent },
     { path: 'training', component: TrainingComponent },
-    { path: 'hr-finance', component: HrFinanceComponent }
+    { path: 'hr-finance', component: HrFinanceComponent },
+    { path: 'admin', component: AdminComponent }
 ];
 
 @NgModule({

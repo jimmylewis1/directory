@@ -13,4 +13,12 @@
   &__phone-container {
     display: flex;
   }
+  &__gen-info {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+  }
 }
