@@ -1,0 +1,170 @@
+<div class="global__page-title">HR / Finance</div>
+<div class="global__main-line-container"></div>
+
+<div class="global__add-new" (click)="open(newEmpModal)">New Employee</div>
+
+<table class="global__table table table-striped">
+  <thead>
+  <th>Name</th>
+  <th>Title</th>
+  <th class="global__td-center">Direct Number</th>
+  <th class="global__td-center">Internal Extension</th>
+  <th class="global__td-center">Email</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let hr of hrFinance">
+    <td>{{ hr['first_name']}} {{ hr['last_name']}}</td>
+    <td>{{ hr.title}}</td>
+    <td class="global__td-center">{{ hr.phone}}</td>
+    <td class="global__td-center">{{ hr['phone_ext']}}</td>
+    <td class="global__td-center">{{ hr.email}}</td>
+    <td>
+      <div class="global__actn-icons">
+        <div class="inlineSvg__edit"
+             [inlineSVG]="'assets/images/wv-icon-pencil.svg'"
+             (click)="open(editModal)"></div>
+        <div class="inlineSvg__delete"
+             [inlineSVG]="'assets/images/wv-icon-trashcan.svg'"></div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<!--New Employee Modal-->
+<ng-template ngbModalContainer #newEmpModal let-c="close" let-d="dismiss">
+  <div class="modal-content-large">
+    <div class="modal-header">
+      <h4 class="modal-title">Add Employee</h4>
+      <button type="button"
+              class="close inlineSvg__close"
+              aria-label="Close"
+              (click)="d('Cross click')"
+              [inlineSVG]="'/assets/images/wv-icon-times.svg'">
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="employee-modal">
+        <div class="employee-modal__main-container">
+          <div class="employee-modal__main-container--box">
+            <div class="employee-modal__main-container--editable">
+              <form (ngSubmit)="onSave(f)" #f="ngForm">
+                <div>
+                  <input type="text"
+                         class="global__input-hidden"
+                         [(ngModel)]="departmentName"
+                         name="department"
+                  >
+                  <label for="userFirstName">First Name:</label>
+                  <input type="text"
+                         class="form-control"
+                         ngModel
+                         name="first_name">
+                </div>
+                <div>
+                  <label for="userLastName">Last Name:</label>
+                  <input  type="text"
+                          class="form-control"
+                          ngModel
+                          name="last_name">
+                </div>
+                <div>
+                  <label for="userTitle">Title:</label>
+                  <input  type="text"
+                          class="form-control"
+                          ngModel
+                          name="title">
+                </div>
+                <div>
+                  <label for="userPhone">Direct Line:</label>
+                  <input  type="text"
+                          class="form-control"
+                          ngModel
+                          name="phone">
+                </div>
+                <div>
+                  <label for="userExt">Internal Extention:</label>
+                  <input  type="text"
+                          class="form-control"
+                          ngModel
+                          name="phone_ext">
+                </div>
+                <div>
+                  <label for="userEmail">Email:</label>
+                  <input  type="text"
+                          class="form-control"
+                          ngModel
+                          name="email">
+                </div>
+                <div class="employee-modal__btn-container">
+                  <button type="submit"
+                          class="btn btn-outline-success"
+                  >Save</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</ng-template>
+
+<!--Edit Employee Modal-->
+<ng-template ngbModalContainer #editModal let-c="close" let-d="dismiss">
+  <div class="modal-content-large">
+    <div class="modal-header">
+      <h4 class="modal-title" id="myModalLabel">Edit Employee</h4>
+      <button type="button"
+              class="close inlineSvg__close"
+              aria-label="Close"
+              (click)="d('Cross click')"
+              [inlineSVG]="'/assets/images/wv-icon-times.svg'">
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="employee-modal">
+        <div class="employee-modal__main-container">
+          <div class="employee-modal__main-container--box">
+            <div class="employee-modal__main-container--editable">
+              <div>
+                <label for="userFirstName">First Name:</label>
+                <input type="text"
+                       id="userFirstName"
+                       value="sales['first_name']"
+                       [(ngModel)]="sales['first_name']">
+              </div>
+              <div>
+                <label for="userLastName">Last Name:</label>
+                <input  type="text" id="userLastName" [(ngModel)]="sales['last_name']">
+              </div>
+              <div>
+                <label for="userTitle">Title:</label>
+                <input  type="text" id="userTitle" [(ngModel)]="sales['title']">
+              </div>
+              <div>
+                <label for="userPhone">Direct Line:</label>
+                <input  type="text" id="userPhone" [(ngModel)]="sales['phone']">
+              </div>
+              <div>
+                <label for="userExt">Internal Extention:</label>
+                <input  type="text" id="userExt" [(ngModel)]="sales['phone_ext']">
+              </div>
+              <div>
+                <label for="userEmail">Email:</label>
+                <input  type="text" id="userEmail" [(ngModel)]="sales['email']">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="employee-modal__btn-container">
+      <button class="btn btn-outline-danger" title="Delete Employee">Delete</button>
+      <button class="btn btn-outline-success">Save</button>
+    </div>
+  </div>
+</ng-template>
+

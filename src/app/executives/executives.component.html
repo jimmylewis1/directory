@@ -1,0 +1,21 @@
+<div class="global__page-title">Executives</div>
+<div class="global__main-line-container"></div>
+
+<table class="table table-striped table-hover">
+  <thead>
+  <th>Name</th>
+  <th>Title</th>
+  <th class="global__td-center">Direct Number</th>
+  <th class="global__td-center">Ext.</th>
+  <th class="global__td-center">Email</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let exec of execs">
+    <td>{{ exec.first_name}} {{ exec.last_name}}</td>
+    <td>{{ exec.title}}</td>
+    <td class="global__td-center">{{ exec.phone}}</td>
+    <td class="global__td-center">{{ exec.phone_ext}}</td>
+    <td class="global__td-center">{{ exec.email}}</td>
+  </tr>
+  </tbody>
+</table>

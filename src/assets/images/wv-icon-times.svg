@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="502.072" viewBox="0 0 512 502.07166"
+     id="wv-icon-close__svg">
+  <g id="Home-Screen" fill="none">
+    <path
+      style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;marker:none;-inkscape-font-specification:Sans"
+      d="M13.572-465.921a13.847 13.847 0 0 0-6.923 25.528l231.055 225.864L6.65 11.334a13.847 13.847 0 1 0 19.038 19.904l231.488-226.296L488.664 31.238a13.847 13.847 0 0 0 23.365-11.682 13.847 13.847 0 0 0-4.327-8.222L276.646-214.529l231.056-225.864a13.847 13.847 0 0 0 4.327-12.548 13.847 13.847 0 0 0-23.365-6.923L257.175-233.567 25.687-459.864a13.847 13.847 0 0 0-12.115-6.057z"
+      id="wv-icon-close" font-weight="400" color="#000" fill="#000" stroke-width="2" overflow="visible"
+      font-family="Sans" transform="translate(-.223 465.937)"/>
+  </g>
+</svg>

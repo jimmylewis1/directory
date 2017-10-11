@@ -10,13 +10,15 @@
     <th>Title</th>
     <th class="global__td-center">Direct Number</th>
     <th class="global__td-center">Internal Extension</th>
+    <th class="global__td-center">Email</th>
   </thead>
   <tbody>
   <tr *ngFor="let csm of csms">
-    <td>{{ csm.first_name}} {{ csm.last_name}}</td>
-    <td>{{ csm.title}}</td>
-    <td class="global__td-center">{{ csm.phone}}</td>
-    <td class="global__td-center">{{ csm.phone_ext}}</td>
+    <td>{{ csm.first_name }} {{ csm.last_name }}</td>
+    <td>{{ csm.title }}</td>
+    <td class="global__td-center">{{ csm.phone }}</td>
+    <td class="global__td-center">{{ csm.phone_ext }}</td>
+    <td class="global__td-center">{{ csm.email }}</td>
   </tr>
   </tbody>
 </table>

@@ -26,9 +26,30 @@ export class HttpService {
     getHrFinanceTeam() {
         return this.http.get('https://wv-emp-dir.firebaseio.com/employees_hrfinance.json');
     }
+    getExecutives() {
+        return this.http.get('https://wv-emp-dir.firebaseio.com/executives.json');
+    }
 
-    // saveUser(user) {
-    //     console.log('USER:', user);
-    //     return this.http.post('https://test-project-ng4.firebaseio.com/users.json', user);
-    // }
+
+    addSalesEmp(employee) {
+        return this.http.post('https://wv-emp-dir.firebaseio.com/employees_sales.json', employee);
+    }
+    addOnboardingEmp(employee) {
+        return this.http.post('https://wv-emp-dir.firebaseio.com/employees_onboarding.json', employee);
+    }
+    addSupportEmp(employee) {
+        return this.http.post('https://wv-emp-dir.firebaseio.com/employees_support.json', employee);
+    }
+    addCsmEmp(employee) {
+        return this.http.post('https://wv-emp-dir.firebaseio.com/employees_csm.json', employee);
+    }
+    addTrainingEmp(employee) {
+        return this.http.post('https://wv-emp-dir.firebaseio.com/employees_training.json', employee);
+    }
+    addHrFinanceEmp(employee) {
+        return this.http.post('https://wv-emp-dir.firebaseio.com/employees_hrfinance.json', employee);
+    }
+    addExecutiveEmp(employee) {
+        return this.http.post('https://wv-emp-dir.firebaseio.com/executives.json', employee);
+    }
 }

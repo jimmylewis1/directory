@@ -5,7 +5,8 @@
          [inlineSVG]="'assets/images/wv-icon-logo.svg'"></div>
     Employee Directory
   </div>
-  <app-navigation></app-navigation>
+  <app-navigation *ngIf="!showAdminMenu"></app-navigation>
+  <app-admin-navigation *ngIf="showAdminMenu"></app-admin-navigation>
 </div>
 <div class="container">
   <div class="view__container">

@@ -1,25 +1,2 @@
 @import "../../styles";
 
-.admin {
-  &__main-container {
-    margin-top: 10%;
-  }
-  &__grid-row {
-    display: flex;
-    justify-content: center;
-  }
-  &__sq {
-    width: 25%;
-    height: 200px;
-    box-shadow: 4px 3px 7px 2px $gray2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2%;
-    cursor: pointer;
-
-    &:hover {
-      background-color: $gray2;
-    }
-  }
-}

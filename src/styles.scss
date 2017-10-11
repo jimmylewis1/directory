@@ -22,4 +22,121 @@ a {
   &__td-center {
     text-align: center;
   }
+  &__actn-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  &__input-hidden {
+    display: none;
+  }
+  &__add-new {
+    font-size: 14px;
+    color: $blue;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+}
+
+// Icons
+
+.inlineSvg {
+  cursor: pointer !important;
+
+  &__edit {
+    svg {
+      path {
+        fill: $blue;
+      }
+    }
+  }
+  &__delete {
+    svg {
+      width: 17px;
+      path {
+        fill: $red;
+      }
+    }
+  }
+  &__close {
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+
+// Modal
+
+.modal-header {
+  border-bottom: 1px solid $gray1;
+}
+.modal-title {
+  color: $gray1;
+  font-size: 28px;
+}
+.employee-modal {
+
+  &__main-container {
+    padding-left: 20px;
+
+    &--box {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      div:nth-last-child(n) {
+        padding: 10px 100px 0 0;
+      }
+    }
+    &--editable {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0 20px 40px;
+
+      label {
+        font-size: 12px;
+        font-weight: bold;
+        color: $gray1;
+        text-align: left;
+        width: 120px;
+      }
+
+      input {
+        width: 200px;
+        height: 25px;
+        color: $gray1;
+        font-size: 12px;
+        margin-right: 10px;
+        padding-left: 5px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .modal-label {
+        text-align: left;
+        width: 80px;
+        font-size: 14px;
+
+      }
+    }
+  }
+  &__btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    margin-bottom: 15px;
+
+    button:first-child {
+      margin: 0 5px 0;
+    }
+  }
+}
+
+td {
+  font-size: 13px;
+  vertical-align: middle !important;
 }
